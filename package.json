@@ -2,15 +2,17 @@
   "name": "packing_list_travel_planner",
   "version": "1.0.0",
   "description": "A program to help you plan your upcoming trip by creating a packing list",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    
+    "express": "^4.18.2",
+    "express-handlebars": "^3.0.0"
   }
 }
