@@ -46,3 +46,14 @@ footer {
         font-family: 'Edu TAS Beginner', cursive;
     }
 }
+
+.user-button {
+    display: flex;
+    text-align: left;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;  
+    background-color: aquamarine;
+}
+
