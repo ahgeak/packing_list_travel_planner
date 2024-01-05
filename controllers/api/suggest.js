@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-// suggest get request will render the suggested packing list page
+// search get request will render the search page
 router.get('/', async (req, res) => {
     return res.render('suggest');
   });

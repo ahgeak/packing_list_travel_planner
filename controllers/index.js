@@ -1,14 +1,15 @@
 const router = require('express').Router();
 
-const createListRouter = require('./api/create-list');
-const searchRouter = require('./api/search');
-const suggestRouter = require('./api/suggest');
+const createRouter = require('./api/create');
+const newRouter = require('./api/suggest');
+const storedRouter = require('./api/stored');
 const userRouter = require('./api/user');
 
 
-router.use('/create-list', createListRouter);
-router.use('/search', searchRouter);
-router.use('/suggest', suggestRouter);
+
+router.use('/create', createRouter);
+router.use('/new', newRouter);
+router.use('/stored', storedRouter);
 router.use('/user', userRouter);
 
 // user get route will render the login page
@@ -17,3 +18,7 @@ router.get('/', async (req, res) => {
 });
 
 module.exports = router;
+
+
+
+
