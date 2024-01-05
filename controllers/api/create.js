@@ -1,8 +1,8 @@
 const router = require('express').Router();
 
-// search get request will render the search page
+// create_list get request will render the create list page
 router.get('/', async (req, res) => {
-    return res.render('search');
+    return res.render('create');
   });
 
 module.exports = router;
