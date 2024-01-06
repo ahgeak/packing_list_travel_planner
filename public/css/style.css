@@ -91,12 +91,18 @@ footer {
     height: 30%;
 }
 
-.items {
+
+
+#add_list {
+    margin-top: 5%;
+}
+
+#items {
     border-top: 10%;
     border-bottom: 10%;
 }
 
-.save {
+#save {
     margin-top: 10%;
 }
 
