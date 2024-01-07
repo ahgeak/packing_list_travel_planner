@@ -8,28 +8,29 @@ class User extends Model {
   }
 }
 
-User.init({
-  email: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    primaryKey: true,
-    unique: true,
-    validate: {
-      isEmail: true,
+User.init(
+  {
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      primaryKey: true,
+      unique: true
+    },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [8],
+      },
     },
   },
-  password: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    validate: {
-      len: [8],
-    },
-  },
-  sequelize,
-  timestamps: false,
-  freezeTableName: true,
-  underscored: true,
-  modelName: "user",
-});
+  {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: "user",
+  }
+);
 
 module.exports = User;

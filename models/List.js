@@ -25,6 +25,8 @@ List.init(
                 key: 'email',
             },
         },
+    },
+    {
         sequelize,
         timestamps: false,
         freezeTableName: true,

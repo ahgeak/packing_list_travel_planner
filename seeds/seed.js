@@ -9,7 +9,7 @@ const seedDatabase = async () => {
 
   const lists = await List.bulkCreate(listSeedData);
 
-  const users = await Location.bulkCreate(userLoginData);
+  const users = await User.bulkCreate(userLoginData);
 
   process.exit(0);
 };
