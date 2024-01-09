@@ -1,17 +1,17 @@
 [
   {
-    "item": "Toothbrush"
+    "name": "Toothbrush"
   },
   {
-    "item": "Shampoo"
+    "name": "Shampoo"
   },
   {
-    "item": "Jacket"
+    "name": "Jacket"
   },
   {
-    "item": "Running Shoes"
+    "name": "Running Shoes"
   },
   {
-    "item": "Socks"
+    "name": "Socks"
   }
 ]

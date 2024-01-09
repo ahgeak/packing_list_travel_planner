@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
     <link rel="stylesheet" href="/css/style.css">
-   
+
 
 </head>
 
@@ -28,7 +28,7 @@
                         <ul class="right hide-on-med-and-down">
                             <li><a href="/api/create">New List</a></li>
                             <li><a href="/api/stored">Stored Lists</a></li>
-                            <li><a href="/api/user">Log out</a></li>
+                            <li><a id="logout" href="/api/user">Log out</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -36,17 +36,23 @@
                 <ul class="sidenav" id="mobile-demo">
                     <li><a href="/api/create">New List</a></li>
                     <li><a href="/api/stored">Stored Lists</a></li>
-                    <li><a href="/api/user">Log out</a></li>
+
+                    <li><a id="logout" href="/api/user">Log out</a></li>
                 </ul>
             </div>
     </header>
     <main class="container">{{{ body }}}</main>
-    
+
     <footer class="grey-text text-darken-2">Thank you for visiting our PackingList website! &copy 2024
     </footer>
 
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="/js/navbar.js"></script>
+
 
 
 </body>

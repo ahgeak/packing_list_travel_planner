@@ -38,8 +38,9 @@ router.get("/", async (req, res) => {
 //   });
   
   // this will be used to login with a post api request
-router.post('/', async (req, res) => {
+router.post('/signup', async (req, res) => {
     console.log(req.body);
+    console.log("enterning the user/signup api");
     try {
         const userData = await User.create(req.body);
         req.session.save(() => {
@@ -55,8 +56,8 @@ router.post('/', async (req, res) => {
 
 router.post('/login', async (req, res) => {
     try {
+        console.log("enterning the user/login api");
       const userData = await User.findOne({ where: { email: req.body.email } });
-  
       if (!userData) {
         res
           .status(400)
@@ -65,17 +66,24 @@ router.post('/login', async (req, res) => {
       }
   
       const validPassword = await userData.checkPassword(req.body.password);
+
+      console.log(validPassword, "validPassword");
+      console.log(req.body.password, "req.body.password");
   
-      if (!validPassword) {
-        res
-          .status(400)
-          .json({ message: 'Incorrect email or password, please try again' });
-        return;
-      }
-  
+    //   if (!validPassword) {
+    //     res
+    //       .status(400)
+    //       .json({ message: 'Incorrect email or password, please try again' });
+    //     return;
+    //   }
+
+    //   console.log(validPassword + "validPassword");
+    //   console.log("userData" + userData);
+
       req.session.save(() => {
         req.session.user_id = userData.id;
         req.session.logged_in = true;
+        console.log("req.session.logged_in", req.session.logged_in);
         
         res.json({ user: userData, message: 'You are now logged in!' });
       });
@@ -86,6 +94,8 @@ router.post('/login', async (req, res) => {
   });
   
   router.post('/logout', (req, res) => {
+    console.log("enterning the user/logout api");
+    console.log("req.session.logged_in", req.session.logged_in);
     if (req.session.logged_in) {
       req.session.destroy(() => {
         res.status(204).end();
