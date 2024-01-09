@@ -1,3 +1,5 @@
+
+console.log("connected to stored");
 const newFormHandler = async (event) => {
   event.preventDefault();
 
@@ -5,6 +7,8 @@ const newFormHandler = async (event) => {
   const items = document
     .querySelector("#input_items")
     .value.trim();
+
+    console.log(name, items);
 
   if (name && items) {
     const response = await fetch(`/api/stored`, {
@@ -14,7 +18,7 @@ const newFormHandler = async (event) => {
         "Content-Type": "application/json",
       },
     });
-
+    console.log(response);
     if (response.ok) {
         console.log(response);
       document.location.replace("/api/stored");
@@ -29,3 +33,4 @@ if (document.querySelector(".new-list-form")) {
     .querySelector(".new-list-form")
     .addEventListener("submit", newFormHandler);
 };
+
