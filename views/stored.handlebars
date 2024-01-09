@@ -3,18 +3,27 @@
     <h3>Stored List</h3>
 
 
-<div class="stored_list col s12">
-    <div id="list_1" class ="col s12">
-<a class= "btn-small">List 1</a>
-</div>
- <div id="list_2"class =" col s12">
-<a class="btn-small">List 2</a>
-</div>
- <div id="list_3"class =" col s12">
-<a class="btn-small">List 3</a>
-</div>
-<div id="list_4" class =" col s12"></div>
-<a class="btn-small">List 4</a>
-</div>
+    <div class="stored_list col s12">
+        {{#each lists as |list|}}
+        <div id="list_1" class="col s12">
+            <a class="btn-small">{{list.name}}</a>
+            <ol>
+
+                {{#each list.items}}
+                <li>{{list.items}}</li>
+                {{/each}}
+            </ol>
+
+        </div>
+        {{/each}}
+        {{!-- <div id="list_2" class=" col s12">
+            <a class="btn-small">List 2</a>
+        </div>
+        <div id="list_3" class=" col s12">
+            <a class="btn-small">List 3</a>
+        </div>
+        <div id="list_4" class=" col s12"></div>
+        <a class="btn-small">List 4</a> --}}
+    </div>
 </div>
 </div>

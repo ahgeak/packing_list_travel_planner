@@ -1,6 +1,7 @@
 <form class="form new-list-form">
 <div class="row center-align">
-    <div class="input-field col s12" id="list_name">
+    {{!-- <div class="input-field col s12" id="list_name"> --}}
+    <div class="input-field col s12">
         <input placeholder="Enter your List name" id="list_name" type="text" class="validate">
     </div>
     <div  class="list_image col s12">
@@ -12,9 +13,11 @@
             <input placeholder="Enter your Items" id="input_items" type="text" class="validate">
         </div>
         <div id="items" class="col s12">
-            <button>
-                <a class="btn-floating btn-medium waves-effect waves-teal"><i class="material-icons">add</i></a>
+                {{!-- <a class="btn-floating btn-medium waves-effect waves-teal"> --}}
+            <button id="addBtn">
+                    <i class="material-icons">add</i>
             </button>
+                    {{!-- </a> --}}
         </div>
          <div id="add_list" class="col s12">
             <button type="submit">
@@ -26,3 +29,4 @@
 </form>
 
 <script src="https://kit.fontawesome.com/a3bce9e655.js" crossorigin="anonymous"></script>
+    <script src="/js/createList.js"></script>
