@@ -1,17 +1,14 @@
 [
-  {
-    "name": "Toothbrush"
+  { 
+    "name": "Camping", 
+    "items": "[tent, sleeping bag, tarp, mugs, plates]" 
   },
   {
-    "name": "Shampoo"
+    "name": "Snowboarding",
+    "items": "[hat, gloves, jacket, scarf, snowboard, helmet]"
   },
   {
-    "name": "Jacket"
-  },
-  {
-    "name": "Running Shoes"
-  },
-  {
-    "name": "Socks"
+    "name": "Beach Vacation",
+    "items": "[towel, sandals, hat, sunscreen, beach chair, surfboard]"
   }
 ]

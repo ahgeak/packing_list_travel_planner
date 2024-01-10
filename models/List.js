@@ -16,9 +16,11 @@ List.init(
             allowNull: false,
         },
         items: {
-           type: DataTypes.STRING,
-            // type: DataTypes.ARRAY(DataTypes.JSON),
-            // defaultValue: []
+            // type: DataTypes.STRING,
+            type: DataTypes.ARRAY(DataTypes.JSON),
+            defaultValue: [],
+
+            // defaultValue: [],
         },
         email: {
             type: DataTypes.STRING,

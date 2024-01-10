@@ -5,8 +5,8 @@
 
     <div class="stored_list col s12">
         {{#each lists as |list|}}
-        <div id="list_1" class="col s12">
-            <a class="btn-small">{{list.name}}</a>
+        <div class="col s12">
+            <a id="list_{{@index}}" class="btn-small">{{list.name}}</a>
             <ol>
 
                 {{#each list.items}}
