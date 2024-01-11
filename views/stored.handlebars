@@ -9,8 +9,8 @@
             <a class="btn-small">{{list.name}}</a>
             <ol>
 
-                {{#each list.items}}
-                <li>{{list.items}}</li>
+                {{#each list.items as |item|}}
+                <li>{{item}}</li>
                 {{/each}}
             </ol>
 

@@ -1,7 +1,7 @@
 const { Model, DataTypes, Sequelize } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class List extends Model {}
+class List extends Model { }
 
 List.init(
     {
@@ -15,11 +15,12 @@ List.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+
         items: {
-           type: DataTypes.STRING,
-            // type: DataTypes.ARRAY(DataTypes.JSON),
-            // defaultValue: []
+            type: DataTypes.JSON,
+            defaultValue: [],
         },
+
         email: {
             type: DataTypes.STRING,
             references: {
@@ -30,10 +31,10 @@ List.init(
         user_id: {
             type: DataTypes.INTEGER,
             references: {
-              model: 'user',
-              key: 'id',
+                model: 'user',
+                key: 'id',
             },
-          },
+        },
     },
     {
         sequelize,

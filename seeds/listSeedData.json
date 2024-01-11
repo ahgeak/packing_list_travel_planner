@@ -1,17 +1,6 @@
 [
   {
-    "name": "Toothbrush"
-  },
-  {
-    "name": "Shampoo"
-  },
-  {
-    "name": "Jacket"
-  },
-  {
-    "name": "Running Shoes"
-  },
-  {
-    "name": "Socks"
+    "name": "Jacket",
+    "items": ["hat", "shoes"]
   }
 ]
