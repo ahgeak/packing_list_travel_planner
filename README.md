@@ -22,8 +22,10 @@ Through this program, we learned how to create a full stack program following th
 
 To use this program visit the the deployed webpage. The user will create a username and login that will create a profile for the user. They will then be able to create a packing list and save it to their profile. The program will save previous packing lists for future trips.
 
-Deployed Heroku URL: https://shielded-earth-91970-0db761988706.herokuapp.com/
-
+-Deployed Heroku URL: https://shielded-earth-91970-0db761988706.herokuapp.com/ 
+-GitHub Repo URL: https://github.com/ahgeak/packing_list_travel_planner 
+-Presentation Link: https://docs.google.com/presentation/d/1n928o4pJ5qKPu1wJQ6TcIaMZHNIspR4qSCI-Pa1uIkU/edit#slide=id.g29f43f0a72_0_0 
+-Demo Video: https://docs.google.com/presentation/d/1n928o4pJ5qKPu1wJQ6TcIaMZHNIspR4qSCI-Pa1uIkU/edit#slide=id.p  
 
     ![packingListScreenshot](./public/images/PackingList_Screenshot.png)
 
