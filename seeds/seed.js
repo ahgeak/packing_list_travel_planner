@@ -4,6 +4,7 @@ const { List, User } = require('../models');
 const listSeedData = require('./listSeedData.json');
 const userLoginData = require('./userLoginSeedData.json');
 
+// seeds data from list and user
 const seedDatabase = async () => {
     await sequelize.sync({ force: true });
 
