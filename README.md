@@ -27,7 +27,7 @@ To use this program visit the the deployed webpage. The user will create a usern
 - Presentation Link: https://docs.google.com/presentation/d/1n928o4pJ5qKPu1wJQ6TcIaMZHNIspR4qSCI-Pa1uIkU/edit#slide=id.g29f43f0a72_0_0 
 - Demo Video: https://docs.google.com/presentation/d/1n928o4pJ5qKPu1wJQ6TcIaMZHNIspR4qSCI-Pa1uIkU/edit#slide=id.p  
 
-    ![packingListScreenshot](./public/images/PackingList_Screenshot.png)
+    ![packingListScreenshot] (./public/images/PackingList_Screenshot.png)
 
 ## Credits
 
