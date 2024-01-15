@@ -4,38 +4,6 @@ const { User } = require('../../models');
 router.get("/", async (req, res) => {
   res.render("user");
 });
-
-// user get route will render the login page
-// router.get('/', async (req, res) => {
-//     try {
-//         // Get all users and JOIN with user data
-//         const userData = await User.findAll();
-    
-//         // Serialize data so the template can read it
-//         const users = userData.map((user) => user.get({ plain: true }));
-    
-//         res.json(users);
-//       } catch (err) {
-//         res.status(500).json(err);
-//       }
-// });
-
-
-
-// router.post('/', async (req, res) => {
-//     try {
-//       const userData = await User.create(req.body);
-  
-//       req.session.save(() => {
-//         req.session.user_id = userData.id;
-//         req.session.logged_in = true;
-  
-//         res.status(200).json(userData);
-//       });
-//     } catch (err) {
-//       res.status(400).json(err);
-//     }
-//   });
   
   // this will be used to login with a post api request
 router.post('/signup', async (req, res) => {
@@ -55,6 +23,7 @@ router.post('/signup', async (req, res) => {
     }
 });
 
+// post route will find the user ID to determine if correct email and password are entered, then use session to log user in
 router.post('/login', async (req, res) => {
     try {
         console.log("enterning the user/login api");
@@ -71,6 +40,7 @@ router.post('/login', async (req, res) => {
       console.log(validPassword, "validPassword");
       console.log(req.body.password, "req.body.password");
   
+      // icebox feature
     //   if (!validPassword) {
     //     res
     //       .status(400)
@@ -95,6 +65,7 @@ router.post('/login', async (req, res) => {
     }
   });
   
+  // post route to log user out when the logout button is clicked, then destroy session
   router.post('/logout', (req, res) => {
     console.log("enterning the user/logout api");
     console.log("req.session.logged_in", req.session.logged_in);

@@ -7,6 +7,7 @@ const router = require('express').Router();
 //      return res.render('stored');
 //   });
 
+// get route to render store page
 router.get('/', async (req, res) => {
   try {
     // Get all lists and JOIN with user data
@@ -29,6 +30,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+// post route to redirect the user to the root
 router.post('/', async (req, res) => {
   console.log(req.body);
   try {

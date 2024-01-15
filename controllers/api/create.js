@@ -2,10 +2,12 @@ const router = require('express').Router();
 const { List } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+// get route to render create.handlebars
 router.get('/', async (req, res) => {
   res.render('create');
 });
 
+// post route uses withAuth by taking req.Body to use in the session
 router.post('/', withAuth, async (req, res) => {
   try {
     const newList = await List.create({
